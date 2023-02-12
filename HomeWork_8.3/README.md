@@ -131,6 +131,9 @@ LICENSE  README.md  app.js  css  img  index.html  jquery.js  js
 
 ```
 9. Подготовьте README.md файл по своему playbook. В нём должно быть описано: что делает playbook, какие у него есть параметры и теги.
+
+    [Readme.md] (https://github.com/Artegro/netology/blob/master/HomeWork_8.3/playbook/ReadMe.md)
+
 10. Готовый playbook выложите в свой репозиторий, поставьте тег `08-ansible-03-yandex` на фиксирующий коммит, в ответ предоставьте ссылку на него.
 
 ---
