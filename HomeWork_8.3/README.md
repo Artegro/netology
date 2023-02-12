@@ -138,6 +138,7 @@ LICENSE  README.md  app.js  css  img  index.html  jquery.js  js
 
 10. Готовый playbook выложите в свой репозиторий, поставьте тег `08-ansible-03-yandex` на фиксирующий коммит, в ответ предоставьте ссылку на него.
 
+    [Репозитарий](https://github.com/Artegro/netology/tree/master/HomeWork_8.3/playbook) закрывающий коммит  `08-ansible-03-yandex`  изменяет только readme.md
 ---
 
 ### Как оформить ДЗ?
