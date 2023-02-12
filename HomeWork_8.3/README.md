@@ -5,6 +5,8 @@
 1. Подготовьте в Yandex Cloud три хоста: для `clickhouse`, для `vector` и для `lighthouse`.
 
     Позготовим 3 ноды в Yandex Cloud.
+    ![image](https://user-images.githubusercontent.com/95859890/218315796-7223e8bc-5951-47b9-9f2a-c1fd41b68ee0.png)
+
 
 Ссылка на репозиторий LightHouse: https://github.com/VKCOM/lighthouse
 
