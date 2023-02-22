@@ -1,22 +1,22 @@
 #pycontribs/centos:7
 ---
-- name: Recreate contaners
-  hosts: localhost
-  tasks:
-    - name: start
-      ansible.builtin.shell: |
-        docker stop clickhouse-01
-        docker stop vector-01
-        docker rm clickhouse-01
-        docker rm vector-01
-        docker network rm internal
-        docker run --name clickhouse-01 -d -p 8123:8123 pycontribs/centos:7 sleep 3600000
-        docker run --name exit
-         -d -p 8686:8686 pycontribs/centos:7  sleep 3600000
-        docker network create --subnet 172.18.0.0/24 --gateway 172.18.0.1 internal
-        docker network connect --ip 172.18.0.2 internal clickhouse-01
-        docker network connect --ip 172.18.0.3 internal vector-01
-      become: true
+# - name: Recreate contaners
+#   hosts: localhost
+#   tasks:
+#     - name: start
+#       ansible.builtin.shell: |
+#         docker stop clickhouse-01
+#         docker stop vector-01
+#         docker rm clickhouse-01
+#         docker rm vector-01
+#         docker network rm internal
+#         docker run --name clickhouse-01 -d -p 8123:8123 pycontribs/centos:7 sleep 3600000
+#         docker run --name exit
+#          -d -p 8686:8686 pycontribs/centos:7  sleep 3600000
+#         docker network create --subnet 172.18.0.0/24 --gateway 172.18.0.1 internal
+#         docker network connect --ip 172.18.0.2 internal clickhouse-01
+#         docker network connect --ip 172.18.0.3 internal vector-01
+#       become: true
 - name: Install Clickhouse
   hosts: clickhouse
   handlers:
@@ -70,6 +70,7 @@
   tasks:
     - name: VECTOR | Install rpm
       become: true
+      become_method: sudo
       ansible.builtin.yum:
         name: "{{ vector_url }}"
         state: present
