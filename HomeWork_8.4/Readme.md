@@ -116,6 +116,9 @@
     ```
 
 10. Выложите playbook в репозиторий.
+
+      [Выполнено](https://github.com/Artegro/netology/tree/master/HomeWork_8.4/playbook)
+      
 11. В ответ приведите ссылки на оба репозитория с roles и одну ссылку на репозиторий с playbook.
 
 ---
