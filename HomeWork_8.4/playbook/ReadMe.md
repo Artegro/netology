@@ -5,6 +5,7 @@
 # Параметры и переменные
 - Тип коннекторов подключения к хостам, в нашем случае это ip и username а так же их имена задаются в файлах дерриктории /inventory
 - Переменные определяются в ролях но так же мы можем переопределять следующие переменные: 
+        
         Для vector: 
             |vector_version| Version of Vector to install|
             |nginx_user_name| User to start nginx service|
@@ -17,4 +18,3 @@
             |clickhouse_user| user name to connect clickhouse|
             |clickhouse_password| password user to connect clickhouse|
 
-- 
