@@ -142,6 +142,8 @@
 >>>>>>> 0454432 (8.5)
 
 5. Добавьте новый тег на коммит с рабочим сценарием в соответствии с семантическим версионированием.
+    
+    [Готово](https://github.com/Artegro/netology-vector-role/tree/1.1.0)
 
 ### Tox
 
@@ -158,7 +160,6 @@ docker run --privileged=True -v /home/artegro/GitHub/HomeWork_8.5/roles/vector:/
 
 =======
 
-  Откуда я должне взять этот каталог './example'.
 
 2. Запустите `docker run --privileged=True -v <path_to_repo>:/opt/vector-role -w /opt/vector-role -it aragast/netology:latest /bin/bash`, где path_to_repo — путь до корня репозитория с vector-role на вашей файловой системе.
 
@@ -187,6 +188,8 @@ docker run --privileged=True -v /home/artegro/GitHub/HomeWork_8.5/roles/vector:/
     ![image](https://user-images.githubusercontent.com/95859890/222921307-08da13f5-1556-483b-83a4-5c1ec5a5982d.png)
 
 9. Добавьте новый тег на коммит с рабочим сценарием в соответствии с семантическим версионированием.
+    
+    [Готово](https://github.com/Artegro/netology-vector-role/tree/1.1.1)
 
 После выполнения у вас должно получится два сценария molecule и один tox.ini файл в репозитории. Не забудьте указать в ответе теги решений Tox и Molecule заданий. В качестве решения пришлите ссылку на  ваш репозиторий и скриншоты этапов выполнения задания. 
 
