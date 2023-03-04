@@ -136,16 +136,42 @@
   PLAY RECAP *********************************************************************
   localhost                  : ok=3    changed=2    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
   ```
+  ![image](https://user-images.githubusercontent.com/95859890/222919328-34c34f5c-0938-4e66-a790-9f5440e7f7ad.png)
+
 5. Добавьте новый тег на коммит с рабочим сценарием в соответствии с семантическим версионированием.
 
 ### Tox
 
 1. Добавьте в директорию с vector-role файлы из [директории](./example).
+    
+    Не понял где я дожен взять указанную директорию './example'
+    
 2. Запустите `docker run --privileged=True -v <path_to_repo>:/opt/vector-role -w /opt/vector-role -it aragast/netology:latest /bin/bash`, где path_to_repo — путь до корня репозитория с vector-role на вашей файловой системе.
+```
+docker run --privileged=True -v /home/artegro/GitHub/HomeWork_8.5/roles/vector:/opt/vector-role -w /opt/vector-role -it aragast/netology:latest /bin/bash
+```
+![image](https://user-images.githubusercontent.com/95859890/222919525-b81b3352-8f4d-42eb-adea-00e35bfa26c4.png)
+
 3. Внутри контейнера выполните команду `tox`, посмотрите на вывод.
+Запусти , ожидаемо получил ошибку
+![image](https://user-images.githubusercontent.com/95859890/222919563-7d8829af-968e-4d49-8d5f-994bafaa2bcd.png)
+
 5. Создайте облегчённый сценарий для `molecule` с драйвером `molecule_podman`. Проверьте его на исполнимость.
+    Создаем сценарий в контейнере
+    ![image](https://user-images.githubusercontent.com/95859890/222920402-ffbdd8c2-e0c8-4184-81dc-fa1e2921827f.png)
+    Устанавливаем отсутствующий
+    ```
+    molecule python3 -m pip install "molecule==3.5.2"
+    ```
+    создаем сценарий
+    ![image](https://user-images.githubusercontent.com/95859890/222921145-599c27a6-0178-4de6-874f-90e5fc245794.png)
+    
 6. Пропишите правильную команду в `tox.ini`, чтобы запускался облегчённый сценарий.
+    ![image](https://user-images.githubusercontent.com/95859890/222921220-4fd76f86-9538-4151-b8cc-ca4f94059d09.png)
+
 8. Запустите команду `tox`. Убедитесь, что всё отработало успешно.
+    ![image](https://user-images.githubusercontent.com/95859890/222921307-08da13f5-1556-483b-83a4-5c1ec5a5982d.png)
+
 9. Добавьте новый тег на коммит с рабочим сценарием в соответствии с семантическим версионированием.
 
 После выполнения у вас должно получится два сценария molecule и один tox.ini файл в репозитории. Не забудьте указать в ответе теги решений Tox и Molecule заданий. В качестве решения пришлите ссылку на  ваш репозиторий и скриншоты этапов выполнения задания. 
