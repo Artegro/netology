@@ -136,13 +136,17 @@
   PLAY RECAP *********************************************************************
   localhost                  : ok=3    changed=2    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
   ```
+<<<<<<< HEAD
   ![image](https://user-images.githubusercontent.com/95859890/222919328-34c34f5c-0938-4e66-a790-9f5440e7f7ad.png)
+=======
+>>>>>>> 0454432 (8.5)
 
 5. Добавьте новый тег на коммит с рабочим сценарием в соответствии с семантическим версионированием.
 
 ### Tox
 
 1. Добавьте в директорию с vector-role файлы из [директории](./example).
+<<<<<<< HEAD
     
     Не понял где я дожен взять указанную директорию './example'
     
@@ -152,6 +156,16 @@ docker run --privileged=True -v /home/artegro/GitHub/HomeWork_8.5/roles/vector:/
 ```
 ![image](https://user-images.githubusercontent.com/95859890/222919525-b81b3352-8f4d-42eb-adea-00e35bfa26c4.png)
 
+=======
+
+  Откуда я должне взять этот каталог './example'.
+
+2. Запустите `docker run --privileged=True -v <path_to_repo>:/opt/vector-role -w /opt/vector-role -it aragast/netology:latest /bin/bash`, где path_to_repo — путь до корня репозитория с vector-role на вашей файловой системе.
+
+```
+docker run --privileged=True -v /home/artegro/GitHub/HomeWork_8.5/roles/vector:/opt/vector-role -w /opt/vector-role -it aragast/netology:latest /bin/bash
+```
+>>>>>>> 0454432 (8.5)
 3. Внутри контейнера выполните команду `tox`, посмотрите на вывод.
 Запусти , ожидаемо получил ошибку
 ![image](https://user-images.githubusercontent.com/95859890/222919563-7d8829af-968e-4d49-8d5f-994bafaa2bcd.png)
