@@ -57,7 +57,8 @@
 
 6. Описать в `README.md` обе роли и их параметры.
 
-    Не совсем понял , видимо тут надо сначала выполнить пункт 7 а потом запулнить пункт 6.
+    [Vector readme](https://github.com/Artegro/netology-vector-role/tree/1.0.3#readme)
+    [lighthouse readme](https://github.com/Artegro/netology-lighthouse-role/tree/1.0.2#readme)
 
 7. Повторите шаги 3-6 для lighthouse. Помните, что одна роль должна настраивать один продукт.
 
