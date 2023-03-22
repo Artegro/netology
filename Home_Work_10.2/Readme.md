@@ -77,11 +77,46 @@ summ_2xx_requests То, что у нас нет кодов 4** и 5** не го�
 7. Склонируйте себе [репозиторий](https://github.com/influxdata/sandbox/tree/master) и запустите TICK-стэк, 
 используя технологии docker и docker-compose.
 
+Копирует репозиторий:
+```
+git clone git@github.com:influxdata/sandbox.git
+Cloning into 'sandbox'...
+remote: Enumerating objects: 1718, done.
+remote: Counting objects: 100% (32/32), done.
+remote: Compressing objects: 100% (22/22), done.
+remote: Total 1718 (delta 13), reused 25 (delta 10), pack-reused 1686
+Receiving objects: 100% (1718/1718), 7.17 MiB | 4.50 MiB/s, done.
+Resolving deltas: 100% (946/946), done.
+```
+Запускает
+```
+ ./sandbox up
+Using latest, stable releases
+Spinning up Docker Images...
+...
+Successfully built 1175a6237a67
+Successfully tagged sandbox_documentation:latest
+Creating sandbox_documentation_1 ... done
+Creating sandbox_influxdb_1      ... done
+Creating sandbox_telegraf_1      ... done
+Creating sandbox_kapacitor_1     ... done
+Creating sandbox_chronograf_1    ... done
+Opening tabs in browser...
+```
+
 В виде решения на это упражнение приведите выводы команд с вашего компьютера (виртуальной машины):
 
     - curl http://localhost:8086/ping
     - curl http://localhost:8888
     - curl http://localhost:9092/kapacitor/v1/ping
+
+Ну и вывод
+```
+root@test:/home/artegro/sandbox/sandbox# curl http://localhost:8086/ping
+root@test:/home/artegro/sandbox/sandbox# curl http://localhost:8888
+<!DOCTYPE html><html><head><link rel="stylesheet" href="/index.c708214f.css"><meta http-equiv="Content-type" content="text/html; charset=utf-8"><title>Chronograf</title><link rel="icon shortcut" href="/favicon.70d63073.ico"></head><body> <div id="react-root" data-basepath=""></div> <script type="module" src="/index.c5ba09e6.js"></script><script src="/index.59cbcbd2.js" nomodule="" defer></script> </body></html>root@test:/home/artegro/sandbox/sandbox# curl http://curl http://localhost:9092/kapacitor/v1/ping
+
+```
 
 А также скриншот веб-интерфейса ПО chronograf (`http://localhost:8888`). 
 
