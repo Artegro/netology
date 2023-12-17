@@ -93,7 +93,7 @@ networks:
 -   [build configuration](https://github.com/Artegro/example-teamcity/blob/master/.teamcity/Netology/buildTypes/Netology_Build.xml)
 ![Alt text](image-8.png)
 
--   Исходя из  [докупентации](https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html)  меняем команду с в  *mvn clean deploy*  на *clean deploy jar:jar*
+-   Исходя из  [докупентации](https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html)  меняем команду с *mvn clean deploy*  на *clean package* так как в pom.xml у нас уже указан парамерт <package>jar 
 
 -   Проверяем что всё прошло успешно
 ![Alt text](image-9.png)
