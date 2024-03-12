@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: multi-dep
+  namespace: ls4
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: multi
+  template:
+    metadata:
+      labels:
+        app: multi
+    spec:
+      containers:
+      - name: multitool
+        image: wbitt/network-multitool:latest
+        ports:
+        - containerPort: 80
+          name: multiport
+        env:
+        - name: HTTP_PORT
+          value: "80"
+        - name: HTTPS_PORT
+          value: "11443"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: multi-svc
+spec:
+  selector:
+    app: multi
+  ports:
+  - name: web
+    port: 80
+    protocol: TCP
+    targetPort: multiport
