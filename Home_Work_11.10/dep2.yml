@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dep1
+  namespace: ls5
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dep1
+  template:
+    metadata:
+      labels:
+        app: dep1
+    spec:
+      containers:
+      - name: multitool
+        image: wbitt/network-multitool:latest
+        ports:
+        - containerPort: 8080
+          name: multiport
+        env:
+        - name: HTTP_PORT
+          value: "80"
+        volumeMounts:
+        - name: vol1
+          mountPath: /input
+      volumes:
+      - name: vol1
+        hostPath:
+          path: /var/log
