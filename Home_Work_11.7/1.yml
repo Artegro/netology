@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: multi-dep
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: multi
+  template:
+    metadata:
+      labels:
+        app: multi
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
+          name: web
+      - name: multitool
+        image: wbitt/network-multitool:latest
+        ports:
+        - containerPort: 8080
