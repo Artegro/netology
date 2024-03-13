@@ -1,0 +1,66 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dep1
+  namespace: ls6
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dep1
+  template:
+    metadata:
+      labels:
+        app: dep1
+    spec:
+      containers:
+      - name: busybox
+        image: busybox
+        command: ['sh', '-c', 'while true; do echo busybox sey seccesful! >> /output/sey.txt; sleep 5; done']
+        volumeMounts:
+        - name: vol1
+          mountPath: /output
+      - name: multitool
+        image: wbitt/network-multitool:latest
+        ports:
+        - containerPort: 8080
+          name: multiport
+        env:
+        - name: HTTP_PORT
+          value: "80"
+        volumeMounts:
+        - name: vol1
+          mountPath: /input
+      volumes:
+      - name: vol1
+        persistentVolumeClaim:
+          claimName: pvc1
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv1
+  namespace: ls6
+spec:
+  storageClassName: host-path
+  capacity:
+    storage: 512Mi
+  accessModes:
+  - ReadWriteOnce
+  hostPath:
+    path: /home/artegro/pv1
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc1
+  namespace: ls6
+spec:
+  storageClassName: host-path
+  volumeMode: Filesystem
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 512Mi
