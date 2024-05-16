@@ -86,7 +86,7 @@ resource "yandex_compute_instance" "priv" {
   }
  }
 
-resource "yandex_vpc_route_table" "net-rt" {
+resource "yandex_vpc_route_table" "nr" {
   network_id = "${yandex_vpc_network.network.id}"
 
   static_route {
