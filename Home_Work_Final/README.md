@@ -311,7 +311,7 @@
 
    Проверяем веб интерфейсы:  
    [Test](http://test.artegro.ru/)  
-   [grafana](http://grafana.artegro.ru/)  
+   [grafana](http://grafana.artegro.ru/d/PwMJtdvnz/1-k8s-for-prometheus-dashboard?orgId=1)  
    login: admin
    password: lPa8R27IF6
 
@@ -340,11 +340,16 @@
    ![alt text](image-75.png)  
 
    Сделаем коммит в ветку майн.
-
+   
    ![alt text](image-77.png)
 
    Проверяем в консоли.  
    ![alt text](image-78.png)  
+
+   Есть нюанс, когда у нас установлен параметр для процессорров `core_fraction = 20`, не всегда с первого раза проходит ансибл кубспрея, но тут достаточно просто перезапустить последнее задание деплоя, но если поставить значение `core_fraction = 100`, то ошибок не возникало.  
+   Прилагаю скрин пайплайна с подобной ситуацией 20 процентов.  
+   ![alt text](image-85.png)  
+
 
 *  Коммит в ветку Test1 то же проходит, но изменения не применяются.  
    ![alt text](image-73.png)
