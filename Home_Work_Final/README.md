@@ -402,8 +402,13 @@
 
 
 Еще раз дублирую ссылки на репозитории и феб интерфесы  
-   [Test](http://test.artegro.ru/)   
+   [Test](http://test.artegro.ru/)  
    [grafana](http://grafana.artegro.ru/)   
+   Если днс не отрезолдит то пропишите у себя в `hosts`  
+   ```
+   test.artegro.ru 158.160.170.151
+   grafana.artegro.ru 158.160.170.151
+   ```
    Git [репозиторий](https://github.com/Artegro/yc-infra/tree/main/infra) с настройкой кластера k8s.  
    Сам [пайплайн](https://github.com/Artegro/yc-infra/blob/main/infra/.gitlab-ci.yml) по разворачиванию инфраструктуры.  
    Пайплайн для приложения [.gitlab-ci](./appprod/.gitlab-ci.yml)
