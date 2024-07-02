@@ -403,7 +403,7 @@
 
 Еще раз дублирую ссылки на репозитории и феб интерфесы  
    [Test](http://test.artegro.ru/)  
-   [grafana](http://grafana.artegro.ru/)   
+   [grafana](http://grafana.artegro.ru/d/PwMJtdvnz/1-k8s-for-prometheus-dashboard?orgId=1)   
    Если днс не отрезолдит то пропишите у себя в `hosts`  
    ```
    test.artegro.ru 158.160.140.11
