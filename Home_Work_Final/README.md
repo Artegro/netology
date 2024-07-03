@@ -56,7 +56,7 @@
 
 1.   ### Подготовим для начала машину
     
-*    Cтавим [terraform](https://releases.hashicorp.com/terraform/1.5.0/terraform_1.5.0_linux_amd64.zip)     копикуем ахив, закидываем бинарник и немного разбираемся с правами, так как мы не ходим работать ихз под root-та версии 1.5.0  
+*    Cтавим [terraform](https://releases.hashicorp.com/terraform/1.5.0/terraform_1.5.0_linux_amd64.zip)     копикуем ахив, закидываем бинарник и немного разбираемся с правами, так как мы не хотим работать из под root-та версии 1.5.0  
     ![alt text](image.png) 
 
 *   Далее [yc](https://yandex.cloud/ru/docs/cli/operations/install-cli) тут все просто , идем по инструкции
@@ -91,7 +91,7 @@
    ![alt text](image-13.png)  
    ![alt text](image-12.png)  
 
-   Создадим конфигурационный файл с содержимым
+   Создадим конфигурационный файл с содержимым  
    ![alt text](image-9.png)  
    ```
    provider_installation {
@@ -106,11 +106,11 @@
    ```
 *  Перейдем к манифестам и подготовки инфраструктуры   
 
-   Добавим тестово файл [Манифест](yc.tf) и выполним terraform init
+   Добавим тестово файл [Манифест](yc.tf) и выполним terraform init  
    ![alt text](image-10.png)  
    ![alt text](image-11.png)  
 
-   Создадим  с самими хранилищем для s3 [Манифест](s3-create.tf)
+   Создадим  с самими хранилищем для s3 [Манифест](s3-create.tf)  
    далее запускаем и проверяем  
    ![alt text](image-14.png)  
    ![alt text](image-15.png)  
