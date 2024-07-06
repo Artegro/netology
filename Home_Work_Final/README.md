@@ -406,8 +406,8 @@
    [grafana](http://grafana.artegro.ru/d/PwMJtdvnz/1-k8s-for-prometheus-dashboard?orgId=1)   
    Если днс не отрезолдит то пропишите у себя в `hosts`  
    ```
-   test.artegro.ru 158.160.171.16
-   grafana.artegro.ru 158.160.171.16
+   test.artegro.ru 158.160.177.118
+   grafana.artegro.ru 158.160.177.118
    ```
    Git [репозиторий](https://github.com/Artegro/yc-infra/tree/main/infra) с настройкой кластера k8s.  
    Сам [пайплайн](https://github.com/Artegro/yc-infra/blob/main/infra/.gitlab-ci.yml) по разворачиванию инфраструктуры.  
