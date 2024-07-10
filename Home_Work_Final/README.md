@@ -361,7 +361,7 @@
    
    *  `12 В манифесте вы используете ингресс. Где его настройки? Как он деплоился?`  
       *  Ответ  
-      Это следствие того, что файл `inventery` был пуст, сейчас исправлено в ответе, и так же ссылка тут [k8s-cluster.tf](https://github.com/Artegro/yc-infra/blob/1cc5cfc648cfea676276a6e1d071bc1cddd9a1a8/infra/terraform/k8s-cluster.tf#L247C1-L247C59)  
+      Это следствие того, что файл `inventery` был пуст, сейчас исправлено в ответе, и так же ссылка тут [k8s-cluster.tf](https://github.com/Artegro/yc-infra/blob/1cc5cfc648cfea676276a6e1d071bc1cddd9a1a8/infra/terraform/k8s-cluster.tf#L247C1-L247C59), так же настройка в переменныйх кластера для кубспрея [addons.yml](https://github.com/Artegro/yc-infra/blob/1cc5cfc648cfea676276a6e1d071bc1cddd9a1a8/infra/kubespray_inventory/group_vars/k8s-cluster/addons.yml#L82C2-L82C38)
 
    *  `12 В том же файле у вас захардкожена версия 1.1.1. А как вы обеспечиваете версионность приложения?`  
       *  Ответ
