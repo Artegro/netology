@@ -17,7 +17,7 @@ vector_config:
       inputs:
         - our_log
       database: logs
-      endpoint: http://172.18.0.2:8123
+      endpoint: http://172.16.0.20:8123
       table: access_logs
       compression: gzip
       healthcheck: false

@@ -1,0 +1,7 @@
+---
+lighthouse_path: "/usr/share/nginx/lighthouse"
+lighthouse_port: "8008"
+clickhouse_host: "172.16.0.20"
+clickhouse_port: "8123"
+clickhouse_user: "netology"
+clickhouse_password: "netology"
